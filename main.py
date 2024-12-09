@@ -4,8 +4,6 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.gridlayout import GridLayout
-from kivy.uix.widget import Widget
-
 
 class BMSApp(App):
     def build(self):
@@ -21,21 +19,35 @@ class BMSApp(App):
         grid_layout = BoxLayout(size_hint=(1, 0.8))
 
         # Create the left section with 7 numerical displays
-        left_grid = GridLayout(cols=1, spacing=5, size_hint=(0.5, 1))
+        left_grid = GridLayout(cols=1, spacing=5, size_hint=(0.35, 0.9))  # Reduced width by 30%
         for i in range(7):
             # Generate random float values between 3.567 and 3.694
             random_value = round(random.uniform(3.567, 3.694), 3)
             # For each cell, create a TextInput for numerical value
-            text_input = TextInput(text=str(random_value), multiline=False, input_filter='float', font_size=18)
+            text_input = TextInput(
+                text=str(random_value),
+                multiline=False,
+                input_filter='float',
+                font_size=20,  # Increased font size
+                halign='center',  # Center-align the text inside the TextInput
+                font_name='Roboto-Bold',  # Use a font that supports bold
+            )
             left_grid.add_widget(text_input)
 
         # Create the right section with 7 numerical displays
-        right_grid = GridLayout(cols=1, spacing=5, size_hint=(0.5, 1))
+        right_grid = GridLayout(cols=1, spacing=5, size_hint=(0.35, 0.9))  # Reduced width by 30%
         for i in range(7, 14):
             # Generate random float values between 3.567 and 3.694
             random_value = round(random.uniform(3.567, 3.694), 3)
             # For each cell, create a TextInput for numerical value
-            text_input = TextInput(text=str(random_value), multiline=False, input_filter='float', font_size=18)
+            text_input = TextInput(
+                text=str(random_value),
+                multiline=False,
+                input_filter='float',
+                font_size=20,  # Increased font size
+                halign='center',  # Center-align the text inside the TextInput
+                font_name='Roboto-Bold',  # Use a font that supports bold
+            )
             right_grid.add_widget(text_input)
 
         # Add both grids to the main horizontal box layout
