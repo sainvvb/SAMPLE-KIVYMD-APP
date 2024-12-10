@@ -22,7 +22,7 @@ class BMSApp(App):
         # Create the left section with 7 numerical displays
         self.left_grid = GridLayout(cols=1, spacing=5, size_hint=(0.5, 0.9))  # Reduced width to 30%
         self.left_text_inputs = []
-        for i in range(7):
+        for i in range(8):
             # Generate random float values between 3.567 and 3.694
             random_value = round(random.uniform(3.567, 3.694), 3)
             # For each cell, create a TextInput for numerical value
@@ -40,7 +40,7 @@ class BMSApp(App):
         # Create the right section with 7 numerical displays
         self.right_grid = GridLayout(cols=1, spacing=5, size_hint=(0.5, 0.9))  # Reduced width to 30%
         self.right_text_inputs = []
-        for i in range(7, 14):
+        for i in range(8, 16):
             # Generate random float values between 3.567 and 3.694
             random_value = round(random.uniform(3.567, 3.694), 3)
             # For each cell, create a TextInput for numerical value
