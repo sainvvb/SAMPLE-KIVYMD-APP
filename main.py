@@ -12,7 +12,7 @@ class BMSApp(App):
         main_layout = BoxLayout(orientation='vertical', padding=10, spacing=10)
 
         # Title at the top of the screen (centered)
-        title = Label(text='BMS 14 CELLS', size_hint=(1, 0.1), font_size=40, bold=True)
+        title = Label(text='BMS 14 CELLS', size_hint=(1, 0.1), font_size=100, bold=True)
         main_layout.add_widget(title)
 
         # Create the two sections (7 cells on each side)
@@ -30,7 +30,7 @@ class BMSApp(App):
                 text=str(random_value),
                 multiline=False,
                 input_filter='float',
-                font_size=40,  # Increased font size
+                font_size=100,  # Increased font size
                 halign='center',  # Center-align the text inside the TextInput
                 font_name='Roboto-Bold',  # Use a font that supports bold
             )
@@ -48,7 +48,7 @@ class BMSApp(App):
                 text=str(random_value),
                 multiline=False,
                 input_filter='float',
-                font_size=40,  # Increased font size
+                font_size=100,  # Increased font size
                 halign='center',  # Center-align the text inside the TextInput
                 font_name='Roboto-Bold',  # Use a font that supports bold
             )
