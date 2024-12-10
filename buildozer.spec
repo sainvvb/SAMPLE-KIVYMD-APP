@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = SampleApp
+title = First
 
 # (str) Package name
 package.name = nfsApk
